@@ -18,7 +18,7 @@ export function makeStore() {
   return configureStore({
     reducer: persistReducer(persistConfig, rootReducer),
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({ thunk: false, serializableCheck: false }),
+      getDefaultMiddleware({ serializableCheck: false }),
   });
 }
 

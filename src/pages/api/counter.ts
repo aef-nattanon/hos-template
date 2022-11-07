@@ -6,7 +6,7 @@ const countHandler: NextApiHandler = async (request, response) => {
   // simulate IO latency
   await new Promise((resolve) => setTimeout(resolve, 500));
 
-  response.json({ data: amount + 1 });
+  response.json({ data: amount });
 };
 
 export default countHandler;
