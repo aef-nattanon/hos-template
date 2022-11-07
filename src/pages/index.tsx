@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+import Nap from '../components/Nap';
 import Counter from '../features/counter/Counter';
 import styles from '../styles/Home.module.css';
 
@@ -7,6 +8,7 @@ import type { NextPage } from "next";
 const IndexPage: NextPage = () => {
   return (
     <div className={styles.container}>
+      <Nap />
       <Head>
         <title>Redux Toolkit</title>
         <link rel="icon" href="/favicon.ico" />
