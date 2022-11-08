@@ -8,6 +8,7 @@ import { useAppSelector } from '../hooks/hooks';
 import { useCounter } from '../hooks/useCounter';
 import { fetchCount2 } from '../services/counterAPI';
 import { selectCount } from '../slices/counterSlice';
+import LocaleSwitcher from './locale-switcher';
 
 function Nap() {
   // const [counterV, setCounterV] = useState(0);
@@ -28,22 +29,13 @@ function Nap() {
   const { mutate: counter, isLoading, error, data } = useCounter();
   return (
     <>
+      <LocaleSwitcher />
       <ul>
         <li>
           <Link href="/">Home</Link>
         </li>
         <li>
           <Link href="/text">Text</Link>
-        </li>
-        <li>
-          <Link href="/" locale="en">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link href="/text" locale="en">
-            Text
-          </Link>
         </li>
       </ul>
       {/* {data && data.data} */}
