@@ -8,6 +8,7 @@ import counterReducer from '../slices/counterSlice';
 const persistConfig = {
   key: "root",
   storage,
+  // whitelist: [],
 };
 
 const rootReducer = combineReducers({
