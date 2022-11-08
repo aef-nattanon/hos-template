@@ -11,6 +11,7 @@ export function useCounter() {
   return useMutation(
     "countAsync",
     (n: number) => fetchCount(n),
+    // apiMutationOption(),
     apiMutationOption({
       onSuccess: (response: AxiosResponse) => {
         if (response.data) {
