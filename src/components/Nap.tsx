@@ -7,7 +7,7 @@ function Nap() {
         <Link href="/">Home</Link>
       </li>
       <li>
-        <Link href="/text">text</Link>
+        <Link href="/text">Text</Link>
       </li>
     </ul>
   );

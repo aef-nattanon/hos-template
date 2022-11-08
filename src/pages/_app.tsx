@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import store from '../store';
+import store from '../store/store';
 
 import type { AppProps } from "next/app";
 export default function MyApp({ Component, pageProps }: AppProps) {

@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import counterReducer from './features/counter/counterSlice';
+import counterReducer from '../slices/counterSlice';
 
 const persistConfig = {
   key: "root",

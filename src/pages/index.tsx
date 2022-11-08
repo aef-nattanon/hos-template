@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
+import Counter from '../components/Counter';
 import Nap from '../components/Nap';
-import Counter from '../features/counter/Counter';
 import styles from '../styles/Home.module.css';
 
 import type { NextPage } from "next";
