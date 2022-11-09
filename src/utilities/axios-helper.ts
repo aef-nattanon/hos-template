@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { HOS_API } from '../constants';
+import { API_URL } from '../constants';
 
 // import { authService } from '../services/auth-service';
 const authService = { refreshAccessToken: () => "new re token" };
@@ -9,7 +9,7 @@ const authService = { refreshAccessToken: () => "new re token" };
 const getAccessToken = () => "token";
 
 const axiosApiInstance = axios.create({
-  baseURL: HOS_API,
+  baseURL: API_URL,
 });
 
 // Request interceptor for API calls

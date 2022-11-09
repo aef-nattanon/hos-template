@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 
-import { HOS_API } from '../constants';
+import { API_URL } from '../constants';
 import { useAppSelector } from '../hooks/hooks';
 import { useCounter } from '../hooks/useCounter';
 import { fetchCount2 } from '../services/counterAPI';
@@ -39,7 +39,7 @@ function Nap() {
         </li>
       </ul>
       {/* {data && data.data} */}
-      <div>{HOS_API}</div>
+      <div>{API_URL}</div>
       <div>{count}</div>
       <button onClick={() => counter(2)}>
         {isLoading ? "Loading1..." : "Submit1"}

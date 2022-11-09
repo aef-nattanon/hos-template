@@ -1,7 +1,9 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 import Counter from '../components/Counter';
 import Nap from '../components/Nap';
+import { setBaseUrl } from '../constants';
 import styles from '../styles/Home.module.css';
 
 import type { NextPage } from "next";
@@ -11,10 +13,16 @@ const IndexPage: NextPage = () => {
       <Nap />
       <Head>
         <title>Redux Toolkit</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={setBaseUrl("/favicon.ico")} />
       </Head>
       <header className={styles.header}>
-        <img src="/logo.svg" className={styles.logo} alt="logo" />
+        <Image
+          src={setBaseUrl("/logo.svg")}
+          className={styles.logo}
+          width="100"
+          height="100"
+          alt="logo"
+        />
         <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
