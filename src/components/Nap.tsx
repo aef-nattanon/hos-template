@@ -1,7 +1,8 @@
 import { AxiosResponse } from 'axios';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
+import { Button } from 'react-ui-component';
 
 import { API_URL } from '../constants';
 import { useAppSelector } from '../hooks/hooks';
@@ -17,7 +18,6 @@ function Nap() {
   useEffect(() => {
     console.log("init page");
   }, []);
-
   const {
     data: counterV,
     isLoading: isL,
@@ -37,13 +37,14 @@ function Nap() {
         <li>
           <Link href="/text">Text</Link>
         </li>
+        <li>
+          <Link href="/text2">Text2</Link>
+        </li>
       </ul>
       {/* {data && data.data} */}
       <div>{API_URL}</div>
       <div>{count}</div>
-      <button onClick={() => counter(2)}>
-        {isLoading ? "Loading1..." : "Submit1"}
-      </button>
+      <Button label={isLoading ? "Loading1..." : "Submit1"} btnType="primary" onClick={() => counter(1)} />
       {error?.message}
 
       <div>{isL ? "loading......" : counterV?.data?.data}</div>

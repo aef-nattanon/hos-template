@@ -1,4 +1,6 @@
 import '../styles/globals.css';
+import 'antd/dist/antd.css';
+import 'react-ui-component/dist/main.css';
 
 import { useRouter } from 'next/router';
 import { IntlProvider } from 'react-intl';
@@ -11,6 +13,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import en from '../lang/en.json';
 import th from '../lang/th.json';
 import store from '../store/store';
+
 
 const messages = {
   th,
