@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { useAppDispatch, useAppSelector } from '../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../hooks/commons';
 import { useCounter } from '../hooks/useCounter';
 import { decrement, increment, incrementByAmount, incrementIfOdd, selectCount } from '../slices/counterSlice';
 import styles from '../styles/Counter.module.css';

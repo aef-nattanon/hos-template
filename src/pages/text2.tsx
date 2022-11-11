@@ -6,8 +6,6 @@ import type { AppProps } from "next/app";
 
 import type { NextPage } from "next";
 const Test: NextPage = ({ Component, pageProps }: AppProps) => {
-  console.log("222");
-
   return (
     <>
       <Nap />

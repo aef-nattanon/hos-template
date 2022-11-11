@@ -3,11 +3,12 @@ import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import counterReducer from '../slices/counterSlice';
+import counterReducer from './slices/counterSlice';
 
 const persistConfig = {
-  key: "root",
+  key: "hos-enterprise",
   storage,
+  version: 1,
   // whitelist: [],
 };
 

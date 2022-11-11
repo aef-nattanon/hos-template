@@ -12,8 +12,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import en from '../lang/en.json';
 import th from '../lang/th.json';
-import store from '../store/store';
-
+import store from '../store';
 
 const messages = {
   th,

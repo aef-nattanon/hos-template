@@ -4,7 +4,7 @@ import { useMutation } from 'react-query';
 import { fetchCount } from '../services/counterAPI';
 import { incrementByAmount } from '../slices/counterSlice';
 import apiMutationOption from '../utilities/apiMutationOption';
-import { useAppDispatch } from './hooks';
+import { useAppDispatch } from './commons';
 
 export function useCounter() {
   const dispatch = useAppDispatch();
