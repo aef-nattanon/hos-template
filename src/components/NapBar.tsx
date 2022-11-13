@@ -18,9 +18,10 @@ function NapBar() {
         <Menu.Item key="/about" onClick={() => Router.push("/about")}>
           About
         </Menu.Item>
-        <Menu.Item disabled>{user}</Menu.Item>
-        <Menu.Item>
-          {" "}
+        <Menu.Item key="name" disabled>
+          {user}
+        </Menu.Item>
+        <Menu.Item key="sing out">
           <Button
             label={"sing out"}
             btnType="primary"
