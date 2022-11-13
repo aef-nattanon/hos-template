@@ -1,4 +1,5 @@
-import { Layout } from 'antd';
+import { Button, Layout } from 'antd';
+import Router from 'next/router';
 
 import HandleUser from '../components/HandleUser';
 import NapBar from '../components/NapBar';
@@ -10,7 +11,20 @@ const IndexPage: NextPage = () => {
   return (
     <HandleUser>
       <NapBar />
-      <Content className={styles.container}>Home</Content>
+      <Content className={styles.container}>
+        <Button
+          onClick={() => {
+            Router.push("http://localhost:3001/pp");
+          }}>
+          PP
+        </Button>
+        <Button
+          onClick={() => {
+            Router.push("http://localhost:3002/op");
+          }}>
+          OP
+        </Button>
+      </Content>
     </HandleUser>
   );
 };

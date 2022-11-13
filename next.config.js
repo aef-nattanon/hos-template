@@ -18,9 +18,9 @@ const nextConfig = {
   },
 };
 
-if (process.env.BASE_URL) {
-  nextConfig.assetPrefix = process.env.BASE_URL + "/";
-  nextConfig.basePath = process.env.BASE_URL;
-}
+// if (process.env.BASE_URL) {
+//   nextConfig.assetPrefix = process.env.BASE_URL + "/";
+//   nextConfig.basePath = process.env.BASE_URL;
+// }
 
 module.exports = nextConfig;
