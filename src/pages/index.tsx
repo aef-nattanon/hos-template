@@ -10,7 +10,7 @@ const IndexPage: NextPage = () => {
   return (
     <HandleUser>
       <NapBar />
-      <Content className={styles.container}>Home pp</Content>
+      <Content className={styles.container}>Home OP</Content>
     </HandleUser>
   );
 };
