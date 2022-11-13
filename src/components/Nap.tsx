@@ -1,6 +1,7 @@
 import { AxiosResponse } from 'axios';
-import { getCookie } from 'cookies-next';
+import { deleteCookie, getCookie } from 'cookies-next';
 import Link from 'next/link';
+import Router from 'next/router';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import { Button } from 'react-ui-component';
@@ -20,6 +21,7 @@ function Nap(props) {
   const [dataCookie, setDataCookie] = useState(null);
 
   const [name, setName] = useCookie("name", "");
+  const user = getCookie("user", COOKIE_OPTION);
   useEffect(() => {
     console.log("init page");
     const d = getCookie("test", COOKIE_OPTION);
@@ -49,9 +51,8 @@ function Nap(props) {
           <Link href="bypass">bypass</Link>
         </li>
         <li>
-          <a href="http://localhost:3000/op/bypass">bypass:3000</a>
+          <Link href="http://localhost:3000/op/bypass">bypass:3000</Link>
         </li>
-
         <li>
           <Link href="/text">Text</Link>
         </li>
@@ -71,6 +72,16 @@ function Nap(props) {
       {error?.message}
 
       <div>{isL ? "loading......" : counterV?.data?.data}</div>
+
+      <Button
+        label={"sing out"}
+        btnType="primary"
+        onClick={() => {
+          deleteCookie("user", COOKIE_OPTION);
+
+          Router.push("http://localhost:3000/sing-in");
+        }}
+      />
     </>
   );
 }

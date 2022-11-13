@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useCallback, useEffect, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 
+import Loading from '../components/Loading';
 import Nap from '../components/Nap';
 import { COOKIE_OPTION } from '../constants';
 import { useAppSelector, useCookie, useRedirect } from '../hooks/commons';
@@ -33,7 +34,7 @@ const Test: NextPage = ({ Component, pageProps }: AppProps) => {
   console.log("111");
 
   if (isRedirect) {
-    return <>loading...</>;
+    return <Loading />;
   }
   return (
     <>

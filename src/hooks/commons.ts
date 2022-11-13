@@ -1,4 +1,4 @@
-import { getCookie, setCookie } from 'cookies-next';
+import { deleteCookie, getCookie, setCookie } from 'cookies-next';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
@@ -95,5 +95,6 @@ export function useCookie(key, initialValue) {
       console.log(error);
     }
   };
-  return [cookieValue, setValue];
+  const deleteValue = () => deleteCookie(key, COOKIE_OPTION);
+  return [cookieValue, setValue, deleteValue];
 }

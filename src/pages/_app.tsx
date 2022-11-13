@@ -10,6 +10,8 @@ import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import Layout from '../components/Layout';
+import Loading from '../components/Loading';
 import en from '../lang/en.json';
 import th from '../lang/th.json';
 import store from '../store';
@@ -35,9 +37,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <Provider store={store}>
-        <PersistGate loading={<>load.....</>} persistor={persistor}>
+        <PersistGate loading={<Loading />} persistor={persistor}>
           <IntlProvider locale={locale} messages={messages[locale]}>
-            <Component {...pageProps} dir={getDirection(locale)} />
+            <Layout>
+              <Component {...pageProps} dir={getDirection(locale)} />
+            </Layout>
           </IntlProvider>
         </PersistGate>
       </Provider>
